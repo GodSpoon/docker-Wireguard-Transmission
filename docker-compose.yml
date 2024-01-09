@@ -15,7 +15,7 @@ services:
       - PGID=1001
       - VIRTUAL_HOST=torrent
       - VIRTUAL_PORT=9091
-      - TZ=Europe/Paris
+      - TZ=America/Indiana/Indianapolis
     volumes:
       - /mnt/media/transmission/wireguard/config:/config
       - /lib/modules:/lib/modules
