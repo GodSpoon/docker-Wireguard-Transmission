@@ -17,7 +17,7 @@ services:
       - VIRTUAL_PORT=9091
       - TZ=Europe/Paris
     volumes:
-      - /some/path/to/wireguard/config:/config
+      - /mnt/media/transmission/wireguard/config:/config
       - /lib/modules:/lib/modules
     ports:
       - 51820:51820/udp
@@ -37,9 +37,9 @@ services:
       - TZ=Europe/Paris
       - TRANSMISSION_WEB_HOME=/transmission-web-control/
     volumes:
-      - /some/path/to/transmission/config:/config
-      - /some/path/to/torrent-watch-folder:/watch
-      - /some/path/to/torrent-data:/downloads
+      - /mnt/media/transmission/config:/config
+      - /mnt/media/transmission/watch:/watch
+      - /mnt/media/transmission/downloads:/downloads
     depends_on:
       - wireguard
     network_mode: service:wireguard
